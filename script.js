@@ -21,9 +21,15 @@ function previousPage() {
 }
 
 function startAlbum() {
-    document.getElementById("bgMusic").play();
+    const music = document.getElementById("bgMusic");
+
+    music.play()
+        .then(() => console.log("Music started"))
+        .catch(err => {
+            console.error(err);
+            alert("Error: " + err.message);
+        });
+
     currentPage = 1;
     showPage(currentPage);
 }
-
-showPage(currentPage);
