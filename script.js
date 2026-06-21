@@ -22,6 +22,7 @@ function previousPage() {
 
 function startAlbum() {
     const music = document.getElementById("bgMusic");
+    document.getElementById("controls").style.display = "block";
 
     music.play()
         .then(() => console.log("Music started"))
